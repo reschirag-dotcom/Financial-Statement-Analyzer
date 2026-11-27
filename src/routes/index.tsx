@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { Link, createFileRoute } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
 import type { FormEvent, ReactNode } from "react";
 
@@ -508,6 +508,12 @@ function Home() {
                 {link.label}
               </a>
             ))}
+            <Link
+              to="/analyze"
+              className="text-sm font-semibold text-emerald-600 transition-colors hover:text-emerald-700"
+            >
+              Analyze
+            </Link>
           </nav>
           <a
             href="#waitlist"
@@ -563,6 +569,13 @@ function Home() {
                 Join the waitlist
                 <ArrowRightIcon />
               </a>
+              <Link
+                to="/analyze"
+                className="inline-flex h-12 items-center gap-2 rounded-xl border border-emerald-400/40 bg-emerald-400/10 px-6 text-sm font-bold text-emerald-300 transition hover:bg-emerald-400/20"
+              >
+                Try the analyzer
+                <ArrowRightIcon />
+              </Link>
               <a
                 href="#how-it-works"
                 className="inline-flex h-12 items-center rounded-xl border border-white/15 bg-white/5 px-6 text-sm font-semibold text-white transition hover:bg-white/10"
@@ -781,6 +794,9 @@ function Home() {
                 {link.label}
               </a>
             ))}
+            <Link to="/analyze" className="text-sm text-slate-400 transition-colors hover:text-white">
+              Analyze
+            </Link>
             <a href="#waitlist" className="text-sm text-slate-400 transition-colors hover:text-white">
               Waitlist
             </a>
